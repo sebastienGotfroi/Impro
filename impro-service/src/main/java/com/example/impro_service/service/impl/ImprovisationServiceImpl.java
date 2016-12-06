@@ -6,10 +6,6 @@ import com.example.impro_service.service.IImprovisationService;
 
 import java.util.List;
 
-/**
- * Created by cecem on 05/12/2016.
- */
-
 public class ImprovisationServiceImpl implements IImprovisationService {
 
     private IImprovisationDAO iImprovisationDAO;
@@ -49,7 +45,7 @@ public class ImprovisationServiceImpl implements IImprovisationService {
         iImprovisationDAO.delete(improvisation);
     }
 
-    private boolean validate(Improvisation improvisation) throws IllegalArgumentException{
+    private void validate(Improvisation improvisation) throws IllegalArgumentException{
         if( improvisation.getName().isEmpty() ){
             throw new IllegalArgumentException("Improvisation name is required");
         }
@@ -62,16 +58,13 @@ public class ImprovisationServiceImpl implements IImprovisationService {
         if( improvisation.getDescription().isEmpty() ){
             throw new IllegalArgumentException("Improvisation description is required");
         }
-        return true;
     }
 
-    private boolean fullValidate (Improvisation improvisation) throws IllegalArgumentException{
-        if(!this.validate(improvisation)){
+    private void fullValidate (Improvisation improvisation) throws IllegalArgumentException{
+        this.validate(improvisation);
+
+        if(improvisation.getId() == null){
             throw new IllegalArgumentException("Improvisation id is required");
         }
-        if(improvisation.getId() == null){
-            return false;
-        }
-        return true;
     }
 }
