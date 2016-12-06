@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface IImprovisationService {
     List<Improvisation> getAll();
-    Improvisation get(Integer id);
-    Improvisation update (Improvisation improvisation);
-    Improvisation create (Improvisation improvisation);
-    void delete (Improvisation improvisation);
+    Improvisation get(Integer id) throws IllegalArgumentException;
+    Improvisation update (Improvisation improvisation) throws IllegalArgumentException;
+    Improvisation create (Improvisation improvisation) throws IllegalArgumentException;
+    void delete (Improvisation improvisation) throws IllegalArgumentException;
 }
