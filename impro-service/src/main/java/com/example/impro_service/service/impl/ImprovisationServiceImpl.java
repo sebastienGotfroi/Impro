@@ -8,10 +8,19 @@ import java.util.List;
 
 public class ImprovisationServiceImpl implements IImprovisationService {
 
+    private static IImprovisationService improvisationService;
+
     private IImprovisationDAO iImprovisationDAO;
 
     public ImprovisationServiceImpl(){
        iImprovisationDAO = IImprovisationDAO.getInstance();
+    }
+
+    public static IImprovisationService getInstance(){
+        if(improvisationService == null){
+            improvisationService = new ImprovisationServiceImpl();
+        }
+        return improvisationService;
     }
 
     @Override

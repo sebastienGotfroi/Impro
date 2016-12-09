@@ -1,5 +1,6 @@
 package com.example.impro_service.service;
 
+import com.example.impro_service.dao.IImprovisationDAO;
 import com.example.impro_service.entity.Improvisation;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  */
 
 public interface IImprovisationService {
+    static IImprovisationDAO getInstance(){return null;};
     List<Improvisation> getAll();
     Improvisation get(Integer id) throws IllegalArgumentException;
     Improvisation update (Improvisation improvisation) throws IllegalArgumentException;
