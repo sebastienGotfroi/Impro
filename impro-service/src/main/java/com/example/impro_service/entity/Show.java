@@ -1,5 +1,7 @@
 package com.example.impro_service.entity;
 
+import com.example.impro_service.enumeration.Enum;
+
 import java.util.Date;
 import java.util.List;
 
@@ -9,6 +11,7 @@ public class Show {
     private Date date;
     private List<Team> teamList;
     private List<Improvisation> improvisationList;
+    private Enum.ShowStatusEnum status;
 
     public Integer getId() {
         return id;
@@ -48,5 +51,13 @@ public class Show {
 
     public void setImprovisationList(List<Improvisation> improvisationList) {
         this.improvisationList = improvisationList;
+    }
+
+    public Enum.ShowStatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(Enum.ShowStatusEnum status) {
+        this.status = status;
     }
 }
