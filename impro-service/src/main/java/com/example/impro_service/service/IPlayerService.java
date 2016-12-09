@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface IPlayerService {
     List<Player> getAll();
-    Player get(Integer id);
-    Player update (Player Player);
-    Player create (Player Player);
-    void delete (Player Player);
+    Player get(Integer id) throws IllegalArgumentException;
+    Player update (Player player) throws IllegalArgumentException;
+    Player create (Player player) throws IllegalArgumentException;
+    void delete (Player player) throws IllegalArgumentException;
 }

@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface IShowService {
     List<Show> getAll();
-    Show get(Integer id);
-    Show update (Show Show);
-    Show create (Show Show);
-    void delete (Show Show);
+    Show get(Integer id) throws IllegalArgumentException;
+    Show update (Show show) throws IllegalArgumentException;
+    Show create (Show show) throws IllegalArgumentException;
+    void delete (Show show) throws IllegalArgumentException;
 }

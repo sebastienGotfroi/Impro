@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface IThemeService {
     List<Theme> getAll();
-    Theme get(Integer id);
-    Theme update (Theme Theme);
-    Theme create (Theme Theme);
-    void delete (Theme Theme);
+    Theme get(Integer id)throws IllegalArgumentException;
+    Theme update (Theme theme)throws IllegalArgumentException;
+    Theme create (Theme theme)throws IllegalArgumentException;
+    void delete (Theme theme)throws IllegalArgumentException;
 }

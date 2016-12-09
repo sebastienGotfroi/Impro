@@ -10,10 +10,10 @@ public class ImprovisationServiceImpl implements IImprovisationService {
 
     private static IImprovisationService improvisationService;
 
-    private IImprovisationDAO iImprovisationDAO;
+    private IImprovisationDAO improvisationDAO;
 
     private ImprovisationServiceImpl(){
-       iImprovisationDAO = IImprovisationDAO.getInstance();
+       improvisationDAO = IImprovisationDAO.getInstance();
     }
 
     public static IImprovisationService getInstance(){
@@ -25,7 +25,7 @@ public class ImprovisationServiceImpl implements IImprovisationService {
 
     @Override
     public List<Improvisation> getAll() {
-        return iImprovisationDAO.getAll();
+        return improvisationDAO.getAll();
     }
 
     @Override
@@ -33,25 +33,25 @@ public class ImprovisationServiceImpl implements IImprovisationService {
         if(id == null) {
             throw new IllegalArgumentException("Improvisation id is required");
         }
-        return iImprovisationDAO.get(id);
+        return improvisationDAO.get(id);
     }
 
     @Override
     public Improvisation update(Improvisation improvisation) throws IllegalArgumentException {
-        this.validate(improvisation);
-        return iImprovisationDAO.update(improvisation);
+        this.fullValidate(improvisation);
+        return improvisationDAO.update(improvisation);
     }
 
     @Override
     public Improvisation create(Improvisation improvisation) {
-        this.fullValidate(improvisation);
-        return iImprovisationDAO.create(improvisation);
+        this.validate(improvisation);
+        return improvisationDAO.create(improvisation);
     }
 
     @Override
     public void delete(Improvisation improvisation) throws IllegalArgumentException {
         this.fullValidate(improvisation);
-        iImprovisationDAO.delete(improvisation);
+        improvisationDAO.delete(improvisation);
     }
 
     private void validate(Improvisation improvisation) throws IllegalArgumentException{

@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface ITeamService {
     List<Team> getAll();
-    Team get(Integer id);
-    Team update (Team Team);
-    Team create (Team Team);
-    void delete (Team Team);
+    Team get(Integer id)throws IllegalArgumentException;
+    Team update (Team team)throws IllegalArgumentException;
+    Team create (Team team)throws IllegalArgumentException;
+    void delete (Team team)throws IllegalArgumentException;
 }
