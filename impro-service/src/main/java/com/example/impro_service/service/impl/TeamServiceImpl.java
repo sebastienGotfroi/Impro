@@ -1,17 +1,10 @@
 package com.example.impro_service.service.impl;
 
-import com.example.impro_service.dao.IImprovisationDAO;
 import com.example.impro_service.dao.ITeamDAO;
-import com.example.impro_service.entity.Player;
 import com.example.impro_service.entity.Team;
-import com.example.impro_service.service.IImprovisationService;
 import com.example.impro_service.service.ITeamService;
 
 import java.util.List;
-
-/**
- * Created by cecem on 05/12/2016.
- */
 
 public class TeamServiceImpl implements ITeamService {
 

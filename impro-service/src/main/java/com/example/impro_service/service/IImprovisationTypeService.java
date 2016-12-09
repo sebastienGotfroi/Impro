@@ -4,10 +4,6 @@ import com.example.impro_service.entity.ImprovisationType;
 
 import java.util.List;
 
-/**
- * Created by cecem on 05/12/2016.
- */
-
 public interface IImprovisationTypeService {
     List<ImprovisationType> getAll();
     ImprovisationType get(Integer id)throws IllegalArgumentException;

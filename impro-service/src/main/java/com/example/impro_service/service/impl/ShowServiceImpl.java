@@ -1,17 +1,10 @@
 package com.example.impro_service.service.impl;
 
-import com.example.impro_service.dao.IImprovisationDAO;
 import com.example.impro_service.dao.IShowDAO;
-import com.example.impro_service.entity.Improvisation;
 import com.example.impro_service.entity.Show;
-import com.example.impro_service.service.IImprovisationService;
 import com.example.impro_service.service.IShowService;
 
 import java.util.List;
-
-/**
- * Created by cecem on 05/12/2016.
- */
 
 public class ShowServiceImpl implements IShowService {
 
