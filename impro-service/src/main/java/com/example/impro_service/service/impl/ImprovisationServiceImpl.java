@@ -12,7 +12,7 @@ public class ImprovisationServiceImpl implements IImprovisationService {
 
     private IImprovisationDAO iImprovisationDAO;
 
-    public ImprovisationServiceImpl(){
+    private ImprovisationServiceImpl(){
        iImprovisationDAO = IImprovisationDAO.getInstance();
     }
 
